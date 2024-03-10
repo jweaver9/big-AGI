@@ -69,11 +69,11 @@ export const appTheme = extendTheme({
         },
         background: {
           // New
-          popup: '#32383E', // 3: #32383E, 1: #171A1C, 2: #25282B
+          popup: '#2E3338', // 3: #32383E, 1: #171A1C, 2: #25282B
           surface: 'var(--joy-palette-neutral-800, #171A1C)',
-          level1: 'var(--joy-palette-neutral-900, #1E2124)',
-          level2: 'var(--joy-palette-neutral-800, #2A2F32)',
-          body: '#1E2124',
+          level1: 'var(--joy-palette-neutral-900, #202326)',
+          level2: 'var(--joy-palette-neutral-800, #25282B)',
+          body: '#b4d242',
           // Former: popup > surface [900] > level 1 [black], level 2 [800] > body [black]
         },
       },
