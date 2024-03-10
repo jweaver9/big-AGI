@@ -8,13 +8,13 @@
  */
 export const Brand = {
   Title: {
-    Base: 'big-AGI',
-    Common: (process.env.NODE_ENV === 'development' ? '[DEV] ' : '') + 'big-AGI',
+    Base: 'Bayard',
+    Common: (process.env.NODE_ENV === 'development' ? '[DEV] ' : '') + 'Bayard',
   },
   Meta: {
     Description: 'Launch big-AGI to unlock the full potential of AI, with precise control over your data and models. Voice interface, AI personas, advanced features, and fun UX.',
-    SiteName: 'big-AGI | Precision AI for You',
-    ThemeColor: '#32383E',
+    SiteName: 'Bayard',
+    ThemeColor: '#b4d242',
     TwitterSite: '@enricoros',
   },
   URIs: {

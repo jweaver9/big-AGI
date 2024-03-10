@@ -64,8 +64,8 @@ export const appTheme = extendTheme({
       palette: {
         text: {
           // do not increase contrast - text.primary would scream at you
-          // secondary: 'var(--joy-palette-neutral-100, #EAEEF6)',
-          // tertiary: 'var(--joy-palette-neutral-400, #9FA6AD)',
+          secondary: 'var(--joy-palette-neutral-100, #EAEEF6)',
+          tertiary: 'var(--joy-palette-neutral-400, #9FA6AD)',
         },
         background: {
           // New
@@ -80,10 +80,7 @@ export const appTheme = extendTheme({
     },
   },
   components: {
-    /**
-     * Input
-     *  - remove the box-shadow: https://github.com/mui/material-ui/commit/8d4728df8a66d710660af96ac7ff3f86d2d26382
-     */
+
     JoyInput: {
       styleOverrides: {
         root: {
@@ -92,10 +89,7 @@ export const appTheme = extendTheme({
       },
     },
 
-    /**
-     * Select
-     * - remove the box-shadow: https://github.com/mui/material-ui/commit/8d4728df8a66d710660af96ac7ff3f86d2d26382
-     * */
+  
     JoySelect: {
       styleOverrides: {
         root: {
@@ -104,7 +98,7 @@ export const appTheme = extendTheme({
       },
     },
 
-    // JoyModal: {
+    // JoyModal: 
     //   styleOverrides: {
     //     backdrop: {
     //       // backdropFilter: 'blur(2px)',
@@ -122,8 +116,8 @@ export const appTheme = extendTheme({
         root: ({ ownerState }) => ({
           ...(ownerState.size === 'md' && {
             '--Switch-trackWidth': '36px',
-            '--Switch-trackHeight': '22px',
-            '--Switch-thumbSize': '17px',
+            '--Switch-trackHeight': '18px',
+            '--Switch-thumbSize': '10px',
           }),
         }),
       },
