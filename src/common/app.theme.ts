@@ -167,11 +167,11 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockImageGap: 1,
     blockLineHeight: 1.2,
     chatMessagePadding: 1,
-    chatDrawerItemSx: { '--ListItem-minHeight': '1rem', fontSize: '17px' },          // 36px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2em', fontSize: '20px' },     // 40px
+    chatDrawerItemSx: { '--ListItem-minHeight': '1rem', fontSize: '13px' },          // 36px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2em', fontSize: '16px' },     // 40px
   },
   sm: {
-    blockCodeFontSize: '0.75rem',
+    blockCodeFontSize: '0.45rem',
     blockFontSize: 'sm',
     blockImageGap: 1.5,
     blockLineHeight: 1.714286,
@@ -180,7 +180,7 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.5rem', fontSize: '24px' },
   },
   md: {
-    blockCodeFontSize: '0.875rem',
+    blockCodeFontSize: '0.65rem',
     blockFontSize: 'md',
     blockImageGap: 2,
     blockLineHeight: 1.75,
