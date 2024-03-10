@@ -38,23 +38,23 @@ export const appTheme = extendTheme({
     light: {
       palette: {
         neutral: {
-          plainColor: 'var(--joy-palette-neutral-700)',     // [700 -> 800] Dropdown menu: increase text contrast a bit
-          solidBg: 'var(--joy-palette-neutral-500)',        // [500 -> 700] PageBar background & Button[solid]
-          solidHoverBg: 'var(--joy-palette-neutral-600)',   // [600 -> 800] Buttons[solid]:hover
+        plainColor: 'var(--joy-palette-neutral-800)', // Darker for dropdown menu text to increase contrast
+        solidBg: 'var(--joy-palette-neutral-700)', // Darker for PageBar background & Button[solid] for visibility
+        solidHoverBg: 'var(--joy-palette-neutral-800)', // Even darker for Buttons[solid]:hover to indicate interaction
         },
         // primary [800] > secondary [700 -> 800] > tertiary [600] > icon [500 -> 700]
         text: {
-          icon: 'var(--joy-palette-neutral-700)',           // <IconButton color='neutral' />
-          secondary: 'var(--joy-palette-neutral-600)',      // increase contrast a bit
-          tertiary: 'var(--joy-palette-neutral-500)',       // increase contrast a bit
+          secondary: 'var(--joy-palette-chartreuse, #99AC51)', // Directly using the vibrant chartreuse for secondary text
+          tertiary: 'var(--joy-palette-neutral-700)', // Darker for better readability as tertiary text
+          icon: 'var(--joy-palette-neutral-700)', // Same as tertiary for consistency in icons and similar elements
         },
         // popup [white] > surface [50] > level1 [100] > level2 [200] > level3 [300 -> unused] > body [white -> 300]
         background: {
           // New
-          surface: 'var(--joy-palette-neutral-50, #E8EBEF)',
-          level1: 'var(--joy-palette-neutral-100, #D6DDE4)',
-          level2: 'var(--joy-palette-neutral-200, #BCC8D4)',
-          body: 'var(--joy-palette-neutral-300, #A3B4C6)',
+          surface: 'var(--joy-palette-neutral-50, #E8EBEF)', // Lightest for surface areas
+        level1: 'var(--joy-palette-neutral-100, #D6DDE4)', // Slightly darker for level 1 background
+        level2: 'var(--joy-palette-neutral-200, #BCC8D4)', // Further depth for level 2 background
+        body: 'var(--joy-palette-neutral-300, #A3B4C6)', // Darkest in the light palette for body background, provides contrast without being too stark
           // Former
           // body: 'var(--joy-palette-neutral-400, #9FA6AD)',
         },

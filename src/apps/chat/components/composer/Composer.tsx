@@ -487,7 +487,7 @@ export function Composer(props: {
 
   const buttonIcon =
     micContinuation ? <AutoModeIcon />
-      : isAppend ? <SendIcon sx={{ fontSize: 18 }} />
+      : isAppend ? <SendIcon sx={{ fontSize: 12 }} />
         : isReAct ? <PsychologyIcon />
           : isTextBeam ? <ChatBeamIcon /> /* <GavelIcon /> */
             : isDraw ? <FormatPaintIcon />
@@ -505,14 +505,14 @@ export function Composer(props: {
 
   return (
     <Box aria-label='User Message' component='section' sx={props.sx}>
-      <Grid container spacing={{ xs: 1, md: 2 }}>
+      <Grid container spacing={{ xs: 3, md: 4 }}>
 
-        <Grid xs={12} md={9}><Box sx={{ display: 'flex', gap: { xs: 1, md: 2 }, alignItems: 'flex-start' }}>
+        <Grid xs={12} md={9}><Box sx={{ display: 'flex', gap: { xs: 2, md: 3 }, alignItems: 'flex-start' }}>
 
           {/* Start buttons column */}
           <Box sx={{
             flexGrow: 0,
-            display: 'grid', gap: 1,
+            display: 'grid', gap: 2,
           }}>
             {isMobile ? <>
 
