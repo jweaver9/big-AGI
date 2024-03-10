@@ -180,18 +180,9 @@ export function ChatMessageList(props: {
 
   // no content: show the persona selector
 
-  const filteredMessages = conversationMessages
+ const filteredMessages = conversationMessages
     .filter(m => m.role !== 'system' || showSystemMessages); // hide the System message if the user choses to
 
-
-  if (!filteredMessages.length)
-    return (
-      <Box sx={{ ...props.sx }}>
-        {conversationId
-          ? <PersonaSelector conversationId={conversationId} runExample={handleRunExample} />
-          : <InlineError severity='info' error='Select a conversation' sx={{ m: 2 }} />}
-      </Box>
-    );
 
   return (
     <List sx={{
