@@ -43,7 +43,7 @@ import { useChatShowTextDiff } from '../../store-app-chat';
 const ENABLE_SELECTION_RIGHT_CLICK_MENU: boolean = true;
 
 // Enable the hover button to copy the whole message. The Copy button is also available in Blocks, or in the Avatar Menu.
-const ENABLE_COPY_MESSAGE_OVERLAY: boolean = false;
+const ENABLE_COPY_MESSAGE_OVERLAY: boolean = true;
 
 
 export function messageBackground(messageRole: DMessage['role'] | string, wasEdited: boolean, unknownAssistantIssue: boolean): string {
