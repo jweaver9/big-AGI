@@ -28,7 +28,7 @@ export function AppPersonas() {
   usePluggableOptimaLayout(drawerContent, null, null, 'AppPersonas');
 
 
-  return (
+ // return (
     <Box sx={{
       flexGrow: 1,
       overflowY: 'auto',
@@ -50,5 +50,5 @@ export function AppPersonas() {
       </Container>
 
     </Box>
-  );
+//  );
 }
