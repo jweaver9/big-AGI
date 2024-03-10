@@ -1,7 +1,7 @@
 :root {
-    --AGI-Nav-width: 100px;
-    --AGI-Drawer-width: 100px;
-    --AGI-Desktop-Drawer-width: clamp(100px, 22.1vw, 450px);
+    --AGI-Nav-width: 75px;
+    --AGI-Drawer-width: 75px;
+    --AGI-Desktop-Drawer-width: clamp(75p, 22.1vw, 450px);
     --AGI-Optima-Radius: * var(--joy-radius-lg)
 }
 
