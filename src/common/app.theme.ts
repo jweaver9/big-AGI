@@ -16,7 +16,7 @@ export const formLabelStartWidth = 140;
 // Theme & Fonts
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-  weight: [ /* '300', sm */ '400' /* (undefined, default) */, '500' /* md */, '600' /* lg */, '700' /* xl */],
+  weight: [ /* '300', sm */ '500' /* (undefined, default) */, '600' /* md */, '700' /* lg */, '800' /* xl */],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -39,14 +39,14 @@ export const appTheme = extendTheme({
       palette: {
         neutral: {
           plainColor: 'var(--joy-palette-neutral-700)',     // [700 -> 800] Dropdown menu: increase text contrast a bit
-          solidBg: 'var(--joy-palette-neutral-600)',        // [500 -> 700] PageBar background & Button[solid]
-          solidHoverBg: 'var(--joy-palette-neutral-800)',   // [600 -> 800] Buttons[solid]:hover
+          solidBg: 'var(--joy-palette-neutral-500)',        // [500 -> 700] PageBar background & Button[solid]
+          solidHoverBg: 'var(--joy-palette-neutral-600)',   // [600 -> 800] Buttons[solid]:hover
         },
         // primary [800] > secondary [700 -> 800] > tertiary [600] > icon [500 -> 700]
         text: {
-          icon: 'var(--joy-palette-neutral-700)',           // <IconButton color='neutral' /> icon color
-          secondary: 'var(--joy-palette-neutral-800)',      // increase contrast a bit
-          // tertiary: 'var(--joy-palette-neutral-700)',       // increase contrast a bit
+          icon: 'var(--joy-palette-neutral-700)',           // <IconButton color='neutral' />
+          secondary: 'var(--joy-palette-neutral-600)',      // increase contrast a bit
+          tertiary: 'var(--joy-palette-neutral-500)',       // increase contrast a bit
         },
         // popup [white] > surface [50] > level1 [100] > level2 [200] > level3 [300 -> unused] > body [white -> 300]
         background: {
@@ -71,7 +71,7 @@ export const appTheme = extendTheme({
           // New
           popup: '#32383E', // 3: #32383E, 1: #171A1C, 2: #25282B
           surface: 'var(--joy-palette-neutral-800, #171A1C)',
-          level1: 'var(--joy-palette-neutral-900, #202326)',
+          level1: 'var(--joy-palette-neutral-900, #1E2124)',
           level2: 'var(--joy-palette-neutral-800, #2A2F32)',
           body: '#171A1C',
           // Former: popup > surface [900] > level 1 [black], level 2 [800] > body [black]
@@ -115,9 +115,9 @@ export const appTheme = extendTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...(ownerState.size === 'md' && {
-            '--Switch-trackWidth': '36px',
-            '--Switch-trackHeight': '18px',
-            '--Switch-thumbSize': '10px',
+            '--Switch-trackWidth': '25px',
+            '--Switch-trackHeight': '15p',
+            '--Switch-thumbSize': '5px',
           }),
         }),
       },
