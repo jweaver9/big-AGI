@@ -24,6 +24,16 @@ import { PersonaSelector } from './persona-selector/PersonaSelector';
 import { useChatShowSystemMessages } from '../store-app-chat';
 import { useScrollToBottom } from './scroll-to-bottom/useScrollToBottom';
 
+export const fadeInKeyframes = keyframes`
+from { opacity: 0; transform: translateY(-20px); }
+to { opacity: 1; transform: translateY(0); }
+`;
+
+export const fadeOutKeyframes = keyframes`
+from { opacity: 1; transform: translateY(0); }
+to { opacity: 0; transform: translateY(20px); }
+`;
+
 export function ChatMessageList(props: {
   conversationId: DConversationId | null,
   conversationHandler: ConversationHandler | null,
@@ -157,8 +167,10 @@ export function ChatMessageList(props: {
       notifyBooting();
   }, [conversationId, notifyBooting]);
 
+
   const filteredMessages = conversationMessages
     .filter(m => m.role !== 'system' || showSystemMessages);
+    
 
     const WelcomeModule = () => (
       <Box
@@ -200,6 +212,7 @@ export function ChatMessageList(props: {
         </Typography>
       </Box>
     );
+
     
     // Keyframes for fadeInOut animation
     const fadeInOut = keyframes`
