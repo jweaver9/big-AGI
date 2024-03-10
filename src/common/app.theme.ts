@@ -166,15 +166,11 @@ export const cssRainbowColorKeyframes = keyframes`
     }
     // Add all your keyframe color changes here
 `;
-
-// Function to create an Emotion cache instance
 export function createEmotionCache() {
-  const emotionInsertionPoint = typeof document !== 'undefined' ? document.querySelector('meta[name="emotion-insertion-point"]') : null;
-
+  // Directly create the cache without trying to set an insertion point
   const cacheConfig = {
     key: 'mui-style',
-    ...(emotionInsertionPoint instanceof HTMLElement ? { insertionPoint: emotionInsertionPoint } : {}),
   };
-
+  
   return createCache(cacheConfig);
 }
