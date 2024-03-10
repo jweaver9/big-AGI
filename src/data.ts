@@ -1,12 +1,13 @@
-import * as React from 'react';
+// No need to import React if you're not using JSX or React features directly in this file.
+// But, if your environment requires React for defining JSX elements in descriptions or elsewhere, uncomment the next line.
 
-export type SystemPurposeId = 'Novelist' | 'Screenwriter' | 'Poet' | 'ShortStoryWriter';
+export type SystemPurposeId = 'Novelist' | 'Screenwriter' | 'Custom';
 
-export const defaultSystemPurposeId: SystemPurposeId = 'Novelist';
+export const defaultSystemPurposeId: SystemPurposeId = 'Custom';
 
 export type SystemPurposeData = {
   title: string;
-  description: string | React.JSX.Element;
+  description: string; // Changed to string for simplicity, but can be React.JSX.Element if using JSX in descriptions
   systemMessage: string;
   systemMessageNotes?: string;
   symbol: string;
@@ -34,20 +35,18 @@ export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
     examples: ['write a compelling monologue', 'format a chase scene', 'develop a sitcom episode outline'],
     call: { starters: ['Action! What do you need?', 'Screenwriter ready. What\'s the plot?', 'Time to script. Let\'s write.', 'Hello.'] },
   },
-  Poet: {
-    title: 'Poet',
-    description: 'Inspires and assists with the creation of poetry, from sonnets to free verse',
-    systemMessage: 'You are an AI poetry assistant. Let\'s explore the rhythm, rhyme, and emotion of your next poem.',
-    symbol: '📜',
-    examples: ['write a sonnet about loss', 'create a haiku on nature', 'explore themes in free verse'],
-    call: { starters: ['Poetry in motion. What\'s the theme?', 'Poet at your service. Ready to rhyme?', 'Let\'s craft some verses.', 'Hello, poet.'] },
-  },
-  ShortStoryWriter: {
-    title: 'Short Story Writer',
-    description: 'Guides you through the process of writing short stories, from brainstorming to the final draft',
-    systemMessage: 'You are an AI assistant specialized in short stories. Engaging plots, dynamic characters, and satisfying endings await.',
-    symbol: '✍️',
-    examples: ['build a twist ending', 'create a setting for a thriller', 'develop a character arc for a short story'],
-    call: { starters: ['Short and sweet. What\'s the plot?', 'Short story writer here. How can I help?', 'Let\'s write a memorable story.', 'Hello.'] },
+  Custom: {
+    title: 'Custom',
+    description: 'Custom persona to fit your specific needs',
+    systemMessage: 'You are using a custom setup tailored to your specific requirements.',
+    symbol: '✨',
+    examples: [],
+    call: { starters: ['What can I do for you today?', 'Custom service at your call.', 'How may I assist you?', 'Yes?'] },
   },
 };
+
+// Example of checking if the purpose is 'Custom'
+const systemPurposeId: SystemPurposeId = 'Custom'; // This would typically come from your application logic
+const isCustomPurpose = systemPurposeId === 'Custom';
+
+console.log(`Is custom purpose? ${isCustomPurpose}`);
