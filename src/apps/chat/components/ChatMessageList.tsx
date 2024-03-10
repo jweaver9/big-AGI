@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { shallow } from 'zustand/shallow';
+import { keyframes } from '@emotion/react';
+
 
 import { Box, List, Typography } from '@mui/joy';
 import { SxProps } from '@mui/joy/styles/types';
@@ -40,7 +42,7 @@ export function ChatMessageList(props: {
   const [isImagining, setIsImagining] = React.useState(false);
   const [isSpeaking, setIsSpeaking] = React.useState(false);
   const [selectedMessages, setSelectedMessages] = React.useState<Set<string>>(new Set());
-
+  const [startChat, setStartChat] = React.useState(false);
   const { notifyBooting } = useScrollToBottom();
   const { openPreferencesTab } = useOptimaLayout();
   const [showSystemMessages] = useChatShowSystemMessages();
@@ -158,29 +160,59 @@ export function ChatMessageList(props: {
   const filteredMessages = conversationMessages
     .filter(m => m.role !== 'system' || showSystemMessages);
 
-  // Welcome module
-  const WelcomeModule = () => (
-    <Box className="welcome-module">
-      <Typography level="h4" component="h1" className="welcome-title">Welcome.</Typography>
-      <Typography className="welcome-message">What would you like to talk about today?</Typography>
-    </Box>
-  );
-
-  if (!filteredMessages.length)
-    return (
-      <Box sx={{ ...props.sx }}>
-        <WelcomeModule />
+    const WelcomeModule = () => (
+      <Box
+        className="welcome-module"
+        sx={{
+          textAlign: 'center',
+          transition: 'opacity 2s ease-in-out',
+          opacity: startChat ? 0 : 1, // startChat controls the visibility
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%', // Set the height to take full container height
+          // Remove the blue by setting the color you want, or use theme color
+          backgroundColor: 'background.default',
+          color: 'text.primary',
+        }}
+      >
+        <Typography
+          component="h1"
+          level="h4" // Adjust the level to control the size
+          sx={{
+            fontSize: '2rem', // Adjust the font size as needed
+            fontWeight: 'bold',
+            mb: 2, // Margin bottom for spacing
+          }}
+        >
+          Welcome.
+        </Typography>
+        <Typography
+          className="welcome-message"
+          sx={{
+            // Additional styles for the subheading
+            fontSize: '1.5rem', // Adjust the font size as needed
+            animation: 'fadeInOut 3s infinite',
+          }}
+        >
+          What would you like to talk about today?
+        </Typography>
       </Box>
     );
-
-  return (
-    <List sx={{
-      p: 0, ...(props.sx || {}),
-      display: 'flex',
-      flexDirection: 'column',
-    }}>
-
-      <WelcomeModule />
+    
+    // Keyframes for fadeInOut animation
+    const fadeInOut = keyframes`
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    `;
+    
+    // Inject the keyframes animation into your emotion cache or global styles
+    // This depends on how you've set up emotion or your global CSS.
 
       {optionalTranslationWarning}
 
@@ -226,18 +258,21 @@ export function ChatMessageList(props: {
         },
       )}
 
-      {!!ephemerals.length && (
-        <Ephemerals
-          ephemerals={ephemerals}
-          conversationId={props.conversationId}
-          sx={{
-            mt: 'auto',
-            overflowY: 'auto',
-            minHeight: 64,
-          }}
-        />
-      )}
-
-    </List>
-  );
-}
+      return (
+        <List sx={{ /* styling for the list */ }}>
+          {/* mapping messages to components, etc. */}
+    
+          {ephemerals.length > 0 && (
+            <Ephemerals
+              ephemerals={ephemerals}
+              conversationId={props.conversationId}
+              sx={{
+                mt: 'auto',
+                overflowY: 'auto',
+                minHeight: '64px',
+              }}
+            />
+          )}
+        </List>
+      ); // Close the return statement
+    } // Close the function

@@ -1,4 +1,5 @@
 // app.theme.ts
+import Typography from '@mui/joy/Typography';
 import createCache from '@emotion/cache';
 import { keyframes } from '@emotion/react';
 import { extendTheme } from '@mui/joy';
@@ -72,7 +73,7 @@ export const appTheme = extendTheme({
   components: {
     JoyInput: {
       styleOverrides: {
-        root: { boxShadow: 'none' },
+        root: { boxShagGdow: 'none' },
       },
     },
     JoySelect: {
@@ -84,7 +85,7 @@ export const appTheme = extendTheme({
       styleOverrides: {
         root: {
           fontWeight: '600', // Making the font weight bolder
-          borderRadius: '2px', // Applying a border radius
+          borderRadius: '6px', // Applying a border radius
           textTransform: 'none', // Preventing uppercase text transform
           // Add any other systematic style changes you require
           padding: '8px 16px', // Example: Changing padding
