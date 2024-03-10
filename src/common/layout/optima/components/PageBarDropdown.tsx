@@ -6,7 +6,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
 // set to true to enable the dense mode, which is default in the rest of the app
-const useDenseDropdowns = false;
+const useDenseDropdowns = true;
 // set to false to use normal icons - check with similar menus
 const useBigIcons = true;
 

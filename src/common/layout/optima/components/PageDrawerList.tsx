@@ -6,7 +6,7 @@ import { ColorPaletteProp, List, VariantProp } from '@mui/joy';
 
 export const PageDrawerTallItemSx: SxProps = {
   // TODO: start from this to update the buttons/listbuttons sizes and have uniformity
-  '--ListItem-minHeight': '2.75rem',
+  '--ListItem-minHeight': '1rem',
 };
 
 
@@ -38,7 +38,7 @@ export function PageDrawerList(props: {
     // style
     backgroundColor: 'background.popup',
     border: 'none',
-    // borderBottomRightRadius: 'var(--AGI-Optima-Radius)',
+    borderBottomRightRadius: 'var(--AGI-Optima-Radius)',
     ...(!!props.noTopPadding && { pt: 0 }),
     ...(!!props.noBottomPadding && { pb: 0 }),
 
