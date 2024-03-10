@@ -166,13 +166,13 @@ interface ContentScalingOptions {
 
 export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
   xs: {
-    blockCodeFontSize: '0.75rem',
+    blockCodeFontSize: '0.55rem',
     blockFontSize: 'xs',
     blockImageGap: 1,
-    blockLineHeight: 1.666667,
+    blockLineHeight: 1.33333,
     chatMessagePadding: 1.25,
-    chatDrawerItemSx: { '--ListItem-minHeight': '2.25rem', fontSize: 'sm' },          // 36px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.5rem', fontSize: 'sm' },     // 40px
+    chatDrawerItemSx: { '--ListItem-minHeight': '2rem', fontSize: '15px' },          // 36px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2em', fontSize: '25px' },     // 40px
   },
   sm: {
     blockCodeFontSize: '0.75rem',
