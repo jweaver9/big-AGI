@@ -95,19 +95,19 @@ interface ContentScalingOptions {
   blockCodeFontSize: string;
   blockFontSize: string;
   blockImageGap: number;
-  blockLineHeight: string | number;
-  chatMessagePadding: number;
+  blockLineHeight: number;
+  messagePadding:  number;
   chatDrawerItemSx: { '--ListItem-minHeight': string, fontSize: string };
   chatDrawerItemFolderSx: { '--ListItem-minHeight': string, fontSize: string };
 }
 
-export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
+export const themeScalingMap: Record <ContentScaling, ContentScalingOptions> = {
   xs: {
     blockCodeFontSize: '0.875rem', // Starting smaller for xs
     blockFontSize: 'xs',
     blockImageGap: 2,
     blockLineHeight: 1.4,
-    chatMessagePadding: 4,
+    messagePadding: 2,
     chatDrawerItemSx: { '--ListItem-minHeight': '2rem', fontSize: '0.75rem' }, // Adjusted for coherence
     chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.25rem', fontSize: '0.75rem' },
   },
@@ -116,7 +116,7 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockFontSize: 'sm',
     blockImageGap: 2.5,
     blockLineHeight: 1.6,
-    chatMessagePadding: 5,
+    messagePadding: 5,
     chatDrawerItemSx: { '--ListItem-minHeight': '2.5rem', fontSize: '0.875rem' },
     chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.75rem', fontSize: '0.875rem' },
   },
@@ -125,12 +125,11 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockFontSize: 'md',
     blockImageGap: 3,
     blockLineHeight: 1.75,
-    chatMessagePadding: 6,
+    messagePadding: 6,
     chatDrawerItemSx: { '--ListItem-minHeight': '3rem', fontSize: '1rem' },
     chatDrawerItemFolderSx: { '--ListItem-minHeight': '3.25rem', fontSize: '1rem' },
   },
 };
-
 
 export const themeBgApp = 'background.level1';
 export const themeBgAppDarker = 'background.level2';

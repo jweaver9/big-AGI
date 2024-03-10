@@ -30,7 +30,9 @@ import { DMessage } from '~/common/state/store-chats';
 import { InlineTextarea } from '~/common/components/InlineTextarea';
 import { KeyStroke } from '~/common/components/KeyStroke';
 import { Link } from '~/common/components/Link';
-import { adjustContentScaling, cssRainbowColorKeyframes, themeScalingMap } from '~/common/app.theme';
+import { ContentScaling } from '~/common/app.theme';
+import { cssRainbowColorKeyframes } from '~/common/app.theme';
+import { themeScalingMap } from '~/common/app.theme';
 import { copyToClipboard } from '~/common/util/clipboardUtils';
 import { prettyBaseModel } from '~/common/util/modelUtils';
 import { useUIPreferencesStore } from '~/common/state/store-ui';
@@ -217,7 +219,7 @@ export function ChatMessage(props: {
   const labsChatBeam = useUXLabsStore(state => state.labsChatBeam);
   const { showAvatar, contentScaling, doubleClickToEdit, renderMarkdown } = useUIPreferencesStore(state => ({
     showAvatar: props.showAvatar !== undefined ? props.showAvatar : state.zenMode !== 'cleaner',
-    contentScaling: adjustContentScaling(state.contentScaling, props.adjustContentScaling),
+    contentScaling:  (state.contentScaling, props.adjustContentScaling),
     doubleClickToEdit: state.doubleClickToEdit,
     renderMarkdown: state.renderMarkdown,
   }), shallow);
@@ -412,8 +414,8 @@ export function ChatMessage(props: {
       sx={{
         display: 'flex', flexDirection: !fromAssistant ? 'row-reverse' : 'row', alignItems: 'flex-start',
         gap: { xs: 0, md: 1 },
-        px: { xs: 1, md: themeScalingMap[contentScaling]?.chatMessagePadding ?? 2 },
-        py: themeScalingMap[contentScaling]?.chatMessagePadding ?? 2,
+        px: { xs: 1, md: 2 },
+        py: { xs:1, md:2 },
         backgroundColor,
         borderBottom: '1px solid',
         borderBottomColor: 'divider',
@@ -472,20 +474,18 @@ export function ChatMessage(props: {
       ) : (
 
         <BlocksRenderer
-          text={messageText}
-          fromRole={messageRole}
-          contentScaling={contentScaling}
-          errorMessage={errorMessage}
-          fitScreen={props.fitScreen}
-          isBottom={props.isBottom}
-          renderTextAsMarkdown={renderMarkdown}
-          renderTextDiff={textDiffs || undefined}
-          showDate={props.showBlocksDate === true ? messageUpdated || messageCreated || undefined : undefined}
-          wasUserEdited={wasEdited}
-          onContextMenu={(props.onMessageEdit && ENABLE_SELECTION_RIGHT_CLICK_MENU) ? handleBlocksContextMenu : undefined}
-          onDoubleClick={(props.onMessageEdit && doubleClickToEdit) ? handleBlocksDoubleClick : undefined}
-          optiAllowMemo={messageTyping}
-        />
+            text={messageText}
+            fromRole={messageRole}
+            errorMessage={errorMessage}
+            fitScreen={props.fitScreen}
+            isBottom={props.isBottom}
+            renderTextAsMarkdown={renderMarkdown}
+            renderTextDiff={textDiffs || undefined}
+            showDate={props.showBlocksDate === true ? messageUpdated || messageCreated || undefined : undefined}
+            wasUserEdited={wasEdited}
+            onContextMenu={(props.onMessageEdit && ENABLE_SELECTION_RIGHT_CLICK_MENU) ? handleBlocksContextMenu : undefined}
+            onDoubleClick={(props.onMessageEdit && doubleClickToEdit) ? handleBlocksDoubleClick : undefined}
+            optiAllowMemo={messageTyping} contentScaling={'sm'}        />
 
       )}
 
