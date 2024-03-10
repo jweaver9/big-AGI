@@ -64,8 +64,8 @@ export const appTheme = extendTheme({
       palette: {
         text: {
           // do not increase contrast - text.primary would scream at you
-          secondary: 'var(--joy-palette-neutral-100, #EAEEF6)',
-          tertiary: 'var(--joy-palette-neutral-400, #9FA6AD)',
+          secondary: 'var(--joy-palette-neutral-100, #99AC51)',
+          tertiary: 'var(--joy-palette-neutral-400, #6E675F)',
         },
         background: {
           // New
