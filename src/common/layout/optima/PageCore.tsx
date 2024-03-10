@@ -7,7 +7,7 @@ import { themeBgApp, themeZIndexPageBar } from '~/common/app.theme';
 import type { NavItemApp } from '~/common/app.nav';
 
 // import { MobileNav } from './MobileNav';
-import { PageBar } from './PageBar';
+// import { PageBar } from './PageBar';
 
 
 const pageCoreSx: SxProps = {
@@ -38,12 +38,7 @@ export const PageCore = (props: {
   >
 
     {/* Responsive page bar (pluggable App Center Items and App Menu) */}
-    <PageBar
-      component='header'
-      currentApp={props.currentApp}
-      isMobile={props.isMobile}
-      sx={pageCoreBarSx}
-    />
+   
 
     {/* Page (NextJS) must make the assumption they're in a flex-col layout */}
     {props.children}
