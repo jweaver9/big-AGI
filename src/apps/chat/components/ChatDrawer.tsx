@@ -180,7 +180,7 @@ function ChatDrawer(props: {
   return <>
 
     {/* Drawer Header */}
-    <PageDrawerHeader title='Chats' onClose={closeDrawer}>
+    <PageDrawerHeader title='Conversations' onClose={closeDrawer}>
       <Tooltip title={enableFolders ? 'Hide Folders' : 'Use Folders'}>
         <IconButton onClick={toggleEnableFolders}>
           {enableFolders ? <FoldersToggleOn /> : <FoldersToggleOff />}
@@ -226,7 +226,7 @@ function ChatDrawer(props: {
       />
 
       {/* New Chat Button */}
-      <ListItem sx={{ mx: '0.25rem', mb: 0.5 }}>
+      <ListItem sx={{ mx: '0.45rem', mb: 0.5 }}>
         <ListItemButton
           // variant='outlined'
           variant={disableNewButton ? undefined : 'outlined'}
@@ -241,7 +241,7 @@ function ChatDrawer(props: {
             fontWeight: 'lg',
 
             // style
-            borderRadius: 'md',
+            borderRadius: 'none',
             boxShadow: (disableNewButton || props.isMobile) ? 'none' : 'sm',
             backgroundColor: 'background.popup',
             transition: 'box-shadow 0.2s',

@@ -24,7 +24,7 @@ import { CHAT_NOVEL_TITLE } from '../AppChat';
 
 
 // set to true to display the conversation IDs
-// const DEBUG_CONVERSATION_IDS = false;
+const DEBUG_CONVERSATION_IDS = true;
 
 
 export const FadeInButton = styled(IconButton)({
@@ -248,7 +248,7 @@ function ChatDrawerItem(props: {
       sx={{
         // common
         // position: 'relative', // for the progress bar (now disabled)
-        '--ListItem-minHeight': '2.75rem',
+        '--ListItem-minHeight': '2rem',
 
         // differences between primary and secondary variants
         ...(isActive ? {
@@ -260,7 +260,7 @@ function ChatDrawerItem(props: {
 
         // style
         backgroundColor: isActive ? 'neutral.solidActiveBg' : 'neutral.softBg',
-        borderRadius: 'md',
+        borderRadius: 'none',
         mx: '0.25rem',
         '&:hover > button': {
           opacity: 1, // fade in buttons when hovering, but by default wash them out a bit
@@ -277,7 +277,7 @@ function ChatDrawerItem(props: {
 
         {/* buttons row */}
         {isActive && (
-          <Box sx={{ display: 'flex', gap: 0.5, minHeight: '2.25rem', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', gap: 0.5, minHeight: '.5rem', alignItems: 'center' }}>
             <ListItemDecorator />
 
             {/* Current Folder color, and change initiator */}
