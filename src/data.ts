@@ -1,28 +1,22 @@
-// No need to import React if you're not using JSX or React features directly in this file.
-// But, if your environment requires React for defining JSX elements in descriptions or elsewhere, uncomment the next line.
+// Define the SystemPurposeId type to include 'Novelist', 'Screenwriter', and 'Custom'.
+export type SystemPurposeId = 'Novelist' | 'Screenwriter' | 'Custom' | undefined;
 
-export type SystemPurposeId = 'Novelist' | 'Screenwriter' | 'Custom';
-
-export const defaultSystemPurposeId: SystemPurposeId = 'Custom';
-
+// Define the structure for system purpose data.
 export type SystemPurposeData = {
   title: string;
-  description: string; // Changed to string for simplicity, but can be React.JSX.Element if using JSX in descriptions
+  description: string;
   systemMessage: string;
-  systemMessageNotes?: string;
   symbol: string;
-  imageUri?: string;
-  examples?: string[];
-  highlighted?: boolean;
-  call?: { starters?: string[] };
-  voices?: { elevenLabs?: { voiceId: string } };
+  examples: string[];
+  call?: { starters: string[] };
 };
 
-export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
+// Define the system purposes data.
+export const SystemPurposes: { [key in Exclude<SystemPurposeId, undefined>]: SystemPurposeData } = {
   Novelist: {
     title: 'Novelist',
     description: 'Assists with crafting compelling narratives and developing deep characters for your novels',
-    systemMessage: 'You are an AI writing assistant specialized in novel writing. From character development to plot twists, let\'s make your story unforgettable.',
+    systemMessage: 'You are an AI writing assistant specialized in novel writing. From character development to plot twists, let’s make your story unforgettable.',
     symbol: '📚',
     examples: ['develop a character with a secret past', 'outline a fantasy novel plot', 'create dialogue for a dramatic scene'],
     call: { starters: ['Time to write. What\'s the story?', 'Novelist here. How can I assist?', 'Let\'s bring your characters to life.', 'Hello, writer.'] },
@@ -37,16 +31,10 @@ export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
   },
   Custom: {
     title: 'Custom',
-    description: 'Custom persona to fit your specific needs',
-    systemMessage: 'You are using a custom setup tailored to your specific requirements.',
+    description: 'Tailored assistance for your unique needs',
+    systemMessage: 'You are using a custom AI assistant designed to cater to your specific requirements and help you achieve your goals.',
     symbol: '✨',
-    examples: [],
-    call: { starters: ['What can I do for you today?', 'Custom service at your call.', 'How may I assist you?', 'Yes?'] },
+    examples: ['custom task 1', 'custom task 2'],
+    call: { starters: ['What can I assist with today?', 'Custom assistant ready. What do you need?', 'Here to help with your custom needs.', 'Yes?'] },
   },
 };
-
-// Example of checking if the purpose is 'Custom'
-const systemPurposeId: SystemPurposeId = 'Custom'; // This would typically come from your application logic
-const isCustomPurpose = systemPurposeId === 'Custom';
-
-console.log(`Is custom purpose? ${isCustomPurpose}`);
