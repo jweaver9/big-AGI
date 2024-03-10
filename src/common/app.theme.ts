@@ -162,37 +162,38 @@ interface ContentScalingOptions {
 
 export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
   xs: {
-    blockCodeFontSize: '1rem',
+    blockCodeFontSize: '0.875rem', // Starting smaller for xs
     blockFontSize: 'xs',
-    blockImageGap: 2.5,
-    blockLineHeight: 1.5,
-    chatMessagePadding: 5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '.1rem', fontSize: 'xs' },          // 36px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.1em', fontSize: 'xs' },     // 40px
+    blockImageGap: 2,
+    blockLineHeight: 1.4,
+    chatMessagePadding: 4,
+    chatDrawerItemSx: { '--ListItem-minHeight': '2rem', fontSize: '0.75rem' }, // Adjusted for coherence
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.25rem', fontSize: '0.75rem' },
   },
   sm: {
-    blockCodeFontSize: '1rem',
+    blockCodeFontSize: '1rem', // Standard size for sm
     blockFontSize: 'sm',
-    blockImageGap: 3.5,
-    blockLineHeight: 2,
+    blockImageGap: 2.5,
+    blockLineHeight: 1.6,
     chatMessagePadding: 5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '.1rem', fontSize: 'sm' },
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.1rem', fontSize: 'sm' },
+    chatDrawerItemSx: { '--ListItem-minHeight': '2.5rem', fontSize: '0.875rem' },
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.75rem', fontSize: '0.875rem' },
   },
   md: {
-    blockCodeFontSize: '1rem',
+    blockCodeFontSize: '1.125rem', // Slightly larger for md
     blockFontSize: 'md',
-    blockImageGap: 3.5,
-    blockLineHeight: 2.25,
-    chatMessagePadding: 5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '.1em', fontSize: 'md' },           // 40px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.21em', fontSize: 'md' },    // 44px
+    blockImageGap: 3,
+    blockLineHeight: 1.75,
+    chatMessagePadding: 6,
+    chatDrawerItemSx: { '--ListItem-minHeight': '3rem', fontSize: '1rem' },
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '3.25rem', fontSize: '1rem' },
   },
+};
+
   // lg: {
   //   chatDrawerFoldersLineHeight: '3rem',
   // },
-};
-
+// };
 
 export const cssRainbowColorKeyframes = keyframes`
     100%, 0% {
