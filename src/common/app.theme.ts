@@ -70,9 +70,9 @@ export const appTheme = extendTheme({
         background: {
           // New
           popup: '#b4d242', // 3: #32383E, 1: #171A1C, 2: #25282B
-          surface: 'var(--joy-palette-neutral-900, #b4d242)',
+          surface: 'var(--joy-palette-neutral-900, #171A1C)',
           level1: 'var(--joy-palette-neutral-800, #b4d242)',
-          level2: 'var(--joy-palette-neutral-700, #b4d242)',
+          level2: 'var(--joy-palette-neutral-700, #171A1C)',
           body: '#171A1C',
           // Former: popup > surface [900] > level 1 [black], level 2 [800] > body [black]
         },
