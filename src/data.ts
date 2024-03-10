@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-export type SystemPurposeId = 'Catalyst' | 'Custom' | 'Designer' | 'Developer' | 'DeveloperPreview' | 'Executive' | 'Generic' | 'Scientist' | 'Novelist' | 'Screenwriter' | 'Poet' | 'ShortStoryWriter';
+export type SystemPurposeId = 'Novelist' | 'Screenwriter' | 'Poet' | 'ShortStoryWriter';
 
-export const defaultSystemPurposeId: SystemPurposeId = 'Generic';
+// Set a valid default SystemPurposeId, such as 'Novelist'.
+export const defaultSystemPurposeId: SystemPurposeId = 'Novelist';
 
 export type SystemPurposeData = {
   title: string;
@@ -18,8 +19,6 @@ export type SystemPurposeData = {
 };
 
 export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
-  // ...keep existing personas here
-
   Novelist: {
     title: 'Novelist',
     description: 'Assists with crafting compelling narratives and developing deep characters for your novels',
@@ -52,6 +51,4 @@ export const SystemPurposes: { [key in SystemPurposeId]: SystemPurposeData } = {
     examples: ['build a twist ending', 'create a setting for a thriller', 'develop a character arc for a short story'],
     call: { starters: ['Short and sweet. What\'s the plot?', 'Short story writer here. How can I help?', 'Let\'s write a memorable story.', 'Hello.'] },
   },
-
-  // ...keep existing personas here
 };
