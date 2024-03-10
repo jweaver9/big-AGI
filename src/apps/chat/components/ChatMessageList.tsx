@@ -184,6 +184,12 @@ export function ChatMessageList(props: {
     .filter(m => m.role !== 'system' || showSystemMessages); // hide the System message if the user choses to
 
 
+  if (!filteredMessages.length)
+    return (
+      <Box sx={{ ...props.sx }}>
+      </Box>
+    );
+
   return (
     <List sx={{
       p: 0, ...(props.sx || {}),
