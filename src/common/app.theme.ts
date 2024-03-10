@@ -1,6 +1,6 @@
 import createCache from '@emotion/cache';
 
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import { extendTheme } from '@mui/joy';
 import { keyframes } from '@emotion/react';
 
@@ -15,7 +15,7 @@ export const formLabelStartWidth = 140;
 
 // Theme & Fonts
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   weight: [ /* '300', sm */ '400' /* (undefined, default) */, '500' /* md */, '600' /* lg */, '700' /* xl */],
   subsets: ['latin'],
   display: 'swap',
@@ -31,15 +31,15 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const appTheme = extendTheme({
   fontFamily: {
-    body: inter.style.fontFamily,
+    body: plusJakartaSans.style.fontFamily,
     code: jetBrainsMono.style.fontFamily,
   },
   colorSchemes: {
     light: {
       palette: {
         neutral: {
-          plainColor: 'var(--joy-palette-neutral-800)',     // [700 -> 800] Dropdown menu: increase text contrast a bit
-          solidBg: 'var(--joy-palette-neutral-700)',        // [500 -> 700] PageBar background & Button[solid]
+          plainColor: 'var(--joy-palette-neutral-700)',     // [700 -> 800] Dropdown menu: increase text contrast a bit
+          solidBg: 'var(--joy-palette-neutral-600)',        // [500 -> 700] PageBar background & Button[solid]
           solidHoverBg: 'var(--joy-palette-neutral-800)',   // [600 -> 800] Buttons[solid]:hover
         },
         // primary [800] > secondary [700 -> 800] > tertiary [600] > icon [500 -> 700]
@@ -51,10 +51,10 @@ export const appTheme = extendTheme({
         // popup [white] > surface [50] > level1 [100] > level2 [200] > level3 [300 -> unused] > body [white -> 300]
         background: {
           // New
-          surface: 'var(--joy-palette-neutral-50, #FBFCFE)',
-          level1: 'var(--joy-palette-neutral-100, #F0F4F8)',
-          level2: 'var(--joy-palette-neutral-200, #DDE7EE)',
-          body: 'var(--joy-palette-neutral-300, #CDD7E1)',
+          surface: 'var(--joy-palette-neutral-50, #E8EBEF)',
+          level1: 'var(--joy-palette-neutral-100, #D6DDE4)',
+          level2: 'var(--joy-palette-neutral-200, #BCC8D4)',
+          body: 'var(--joy-palette-neutral-300, #A3B4C6)',
           // Former
           // body: 'var(--joy-palette-neutral-400, #9FA6AD)',
         },
@@ -69,11 +69,11 @@ export const appTheme = extendTheme({
         },
         background: {
           // New
-          popup: '#24292c', // 3: #32383E, 1: #171A1C, 2: #25282B
+          popup: '#32383E', // 3: #32383E, 1: #171A1C, 2: #25282B
           surface: 'var(--joy-palette-neutral-800, #171A1C)',
-          level1: 'var(--joy-palette-neutral-900, #0B0D0E)',
-          level2: 'var(--joy-palette-neutral-800, #171A1C)',
-          body: '#060807',
+          level1: 'var(--joy-palette-neutral-900, #202326)',
+          level2: 'var(--joy-palette-neutral-800, #2A2F32)',
+          body: '#171A1C',
           // Former: popup > surface [900] > level 1 [black], level 2 [800] > body [black]
         },
       },
