@@ -80,6 +80,22 @@ export const appTheme = extendTheme({
         root: { boxShadow: 'none' },
       },
     },
+    JoyButton: {
+      styleOverrides: {
+        root: {
+          fontWeight: '600', // Making the font weight bolder
+          borderRadius: '2px', // Applying a border radius
+          textTransform: 'none', // Preventing uppercase text transform
+          // Add any other systematic style changes you require
+          padding: '8px 16px', // Example: Changing padding
+          backgroundColor: 'var(--joy-palette-chartreuse, #99AC51)',
+          ':hover': { // Example: Hover state styles
+            backgroundColor: 'var(--joy-palette-primary-dark)', // Darken button on hover
+          },
+          // Consider defining styles for different button variants (contained, outlined, etc.) if needed
+        },
+      },
+    },
     JoySwitch: {
       styleOverrides: {
         root: ({ ownerState }) => ({
@@ -92,7 +108,7 @@ export const appTheme = extendTheme({
       },
     },
   },
-});
+})
 
 // Dynamic UI Sizing Types and Implementation
 export type ContentScaling = 'xs' | 'sm' | 'md';
@@ -171,6 +187,6 @@ export function createEmotionCache() {
   const cacheConfig = {
     key: 'mui-style',
   };
-  
+
   return createCache(cacheConfig);
 }
