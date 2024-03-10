@@ -122,7 +122,7 @@ export const navItems: {
       iconActive: AutoAwesomeIcon,
       type: 'app',
       route: '/cortex',
-      _delete: true,
+      _delete: false,
     },
     {
       name: 'Patterns',
@@ -130,7 +130,7 @@ export const navItems: {
       iconActive: AccountTreeIcon,
       type: 'app',
       route: '/patterns',
-      _delete: true,
+      _delete: false,
     },
     {
       name: 'Workspace',
@@ -140,7 +140,7 @@ export const navItems: {
       route: '/workspace',
       hideDrawer: true,
       hideOnMobile: true,
-      _delete: true,
+      _delete: false,
     },
     // <-- divider here -->
     {
@@ -156,6 +156,7 @@ export const navItems: {
       type: 'app',
       route: '/personas',
       hideBar: true,
+      _delete: true, 
     },
     {
       name: 'Media Library',
@@ -163,7 +164,7 @@ export const navItems: {
       iconActive: ImageIcon,
       type: 'app',
       route: '/media',
-      _delete: true,
+      _delete: false,
     },
     {
       name: 'Shared Chat',
