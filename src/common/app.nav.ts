@@ -142,13 +142,7 @@ export const navItems: {
       hideOnMobile: true,
       _delete: true,
     },
-    // <-- divider here -->
-    {
-      name: SPECIAL_DIVIDER,
-      type: 'app',
-      route: SPECIAL_DIVIDER,
-      icon: () => null,
-    },
+   
     {
       name: 'Personas',
       icon: Diversity2Icon, // was: Outlined.. but they look the same
