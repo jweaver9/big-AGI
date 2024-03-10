@@ -10,3 +10,23 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.welcome-module {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .welcome-title {
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold; /* Adjust weight as needed */
+    margin-bottom: 8px; /* Provides spacing between title and message */
+  }
+  
+  .welcome-message {
+    font-size: 16px; /* Adjust size as needed */
+    text-align: center; /* Ensures the text is centered, adjust as needed */
+  }
+  
