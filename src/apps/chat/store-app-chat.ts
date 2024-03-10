@@ -68,7 +68,8 @@ const useAppChatStore = create<AppChatStore>()(persist(
     showSystemMessages: false,
     setShowSystemMessages: (showSystemMessages: boolean) => _set({ showSystemMessages }),
 
-  }), {
+  }), 
+  {
     name: 'app-app-chat',
     version: 1,
 
