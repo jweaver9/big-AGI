@@ -101,6 +101,14 @@ interface ContentScalingOptions {
   chatDrawerItemFolderSx: { '--ListItem-minHeight': string, fontSize: string };
 }
 
+// Assuming TypeScript for type safety
+export const hideOnMobile: Record<string, any> = {
+  '@media (max-width: 767px)': { // Tailwind's "sm" breakpoint is 640px by default, adjust as needed
+    display: 'none',
+  },
+};
+
+
 export const themeScalingMap: Record <ContentScaling, ContentScalingOptions> = {
   xs: {
     blockCodeFontSize: '0.875rem', // Starting smaller for xs
