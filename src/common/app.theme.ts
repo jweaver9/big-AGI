@@ -71,8 +71,8 @@ export const appTheme = extendTheme({
           // New
           popup: '#2E3338', // 3: #32383E, 1: #171A1C, 2: #25282B
           surface: 'var(--joy-palette-neutral-800, #171A1C)',
-          level1: 'var(--joy-palette-neutral-900, #b4d242)',
-          level2: 'var(--joy-palette-neutral-800, #202326)',
+          level1: 'var(--joy-palette-neutral-900, #202326)',
+          level2: 'var(--joy-palette-neutral-800, #b4d242)',
           body: '#171A1C',
           // Former: popup > surface [900] > level 1 [black], level 2 [800] > body [black]
         },
@@ -115,9 +115,9 @@ export const appTheme = extendTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...(ownerState.size === 'md' && {
-            '--Switch-trackWidth': '20px',
-            '--Switch-trackHeight': '15px',
-            '--Switch-thumbSize': '5px',
+            '--Switch-trackWidth': '10px',
+            '--Switch-trackHeight': '5px',
+            '--Switch-thumbSize': '3px',
           }),
         }),
       },
@@ -180,8 +180,8 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockImageGap: 1.5,
     blockLineHeight: 1.714286,
     chatMessagePadding: 1.5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '2.25rem', fontSize: 'sm' },
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.5rem', fontSize: 'sm' },
+    chatDrawerItemSx: { '--ListItem-minHeight': '1.5rem', fontSize: '20px' },
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.5rem', fontSize: '24px' },
   },
   md: {
     blockCodeFontSize: '0.875rem',
@@ -189,8 +189,8 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockImageGap: 2,
     blockLineHeight: 1.75,
     chatMessagePadding: 2,
-    chatDrawerItemSx: { '--ListItem-minHeight': '2.5rem', fontSize: 'md' },           // 40px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.75rem', fontSize: 'md' },    // 44px
+    chatDrawerItemSx: { '--ListItem-minHeight': '2.5rem', fontSize: '24px' },           // 40px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2.75rem', fontSize: '30px' },    // 44px
   },
   // lg: {
   //   chatDrawerFoldersLineHeight: '3rem',
