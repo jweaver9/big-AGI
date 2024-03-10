@@ -4,12 +4,12 @@
  * @author Lea Verou
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
-	color: black;
-	background: none;
-	text-shadow: 0 1px white;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;*/
+/*code[class*="language-"],
+/*pre[class*="language-"] {
+	/*color: black;
+	/*background: none;
+	/*text-shadow: 0 1px white;
+	/*font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;*/
 	/*font-size: 1em;*/
 	/*text-align: left;*/
 	/*white-space: pre;*/
@@ -26,7 +26,7 @@ pre[class*="language-"] {
 	/*-moz-hyphens: none;*/
 	/*-ms-hyphens: none;*/
 	/*hyphens: none;*/
-}
+
 
 /*pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,*/
 /*code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {*/
