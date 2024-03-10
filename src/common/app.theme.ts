@@ -167,8 +167,8 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockImageGap: 1,
     blockLineHeight: 1.5,
     chatMessagePadding: 2,
-    chatDrawerItemSx: { '--ListItem-minHeight': '1rem', fontSize: '11px' },          // 36px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2em', fontSize: '14px' },     // 40px
+    chatDrawerItemSx: { '--ListItem-minHeight': '.5rem', fontSize: '9px' },          // 36px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '1em', fontSize: '11px' },     // 40px
   },
   sm: {
     blockCodeFontSize: '1rem',
@@ -176,8 +176,8 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockImageGap: 1.5,
     blockLineHeight: 2,
     chatMessagePadding: 2,
-    chatDrawerItemSx: { '--ListItem-minHeight': '1rem', fontSize: '11px' },
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2rem', fontSize: '14px' },
+    chatDrawerItemSx: { '--ListItem-minHeight': '.5rem', fontSize: '9px' },
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '1rem', fontSize: '11px' },
   },
   md: {
     blockCodeFontSize: '1.45rem',
@@ -185,8 +185,8 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockImageGap: 2,
     blockLineHeight: 2.25,
     chatMessagePadding: 2.5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '1em', fontSize: '11px' },           // 40px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2rem', fontSize: '14px' },    // 44px
+    chatDrawerItemSx: { '--ListItem-minHeight': '.5em', fontSize: '9px' },           // 40px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '1rem', fontSize: '11px' },    // 44px
   },
   // lg: {
   //   chatDrawerFoldersLineHeight: '3rem',
