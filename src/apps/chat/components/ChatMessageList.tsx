@@ -161,8 +161,8 @@ export function ChatMessageList(props: {
   // Welcome module
   const WelcomeModule = () => (
     <Box sx={{ p: 2, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-      <Typography level="h4" component="h1">Welcome to the Chat!</Typography>
-      <Typography sx={{ mt: 1 }}>This is a safe space to communicate and explore. Let's get started.</Typography>
+      <Typography level="h4" component="h1">Welcome.</Typography>
+      <Typography sx={{ mt: 1 }}>What would you like to talk about today?</Typography>
     </Box>
   );
 
