@@ -2,7 +2,6 @@ import * as React from 'react';
 
 export type SystemPurposeId = 'Novelist' | 'Screenwriter' | 'Poet' | 'ShortStoryWriter';
 
-// Set a valid default SystemPurposeId, such as 'Novelist'.
 export const defaultSystemPurposeId: SystemPurposeId = 'Novelist';
 
 export type SystemPurposeData = {
