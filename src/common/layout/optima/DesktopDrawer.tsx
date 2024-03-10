@@ -35,7 +35,7 @@ const DesktopDrawerTranslatingSheet = styled(Sheet)(({ theme }) => ({
   backgroundColor: 'transparent',
   borderTopRightRadius: 'var(--AGI-Optima-Radius)',
   borderBottomRightRadius: 'var(--AGI-Optima-Radius)',
-  contain: 'strict',
+ // contain: 'strict',
   boxShadow: 'none',
 
   // content layout
