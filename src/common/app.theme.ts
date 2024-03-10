@@ -128,9 +128,9 @@ export const themeBgAppChatComposer = 'background.surface';
 export const lineHeightChatTextMd = 1.15;
 export const lineHeightTextareaMd = 1.15;
 
-export const themeZIndexPageBar = 15;
-export const themeZIndexDesktopDrawer = 17;
-export const themeZIndexDesktopNav = 22;
+export const themeZIndexPageBar = 0;
+export const themeZIndexDesktopDrawer = 25;
+export const themeZIndexDesktopNav = 15;
 export const themeZIndexOverMobileDrawer = 1301;
 
 export const themeBreakpoints = appTheme.breakpoints.values;
