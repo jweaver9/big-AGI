@@ -40,7 +40,7 @@ export function ChatMessageList(props: {
   capabilityHasT2I: boolean,
   chatLLMContextTokens: number | null,
   fitScreen: boolean,
-  isMessageSelectionMode: boolean,
+  isMessageSelectionMode: boolean, 
   onConversationBranch: (conversationId: DConversationId, messageId: string) => void,
   onConversationExecuteHistory: (conversationId: DConversationId, history: DMessage[], chatEffectBeam: boolean) => Promise<void>,
   onTextDiagram: (diagramConfig: DiagramConfig | null) => void,
@@ -52,7 +52,6 @@ export function ChatMessageList(props: {
   const [isImagining, setIsImagining] = React.useState(false);
   const [isSpeaking, setIsSpeaking] = React.useState(false);
   const [selectedMessages, setSelectedMessages] = React.useState<Set<string>>(new Set());
-  const [startChat, setStartChat] = React.useState(false);
   const { notifyBooting } = useScrollToBottom();
   const { openPreferencesTab } = useOptimaLayout();
   const [showSystemMessages] = useChatShowSystemMessages();
@@ -178,7 +177,6 @@ export function ChatMessageList(props: {
         sx={{
           textAlign: 'center',
           transition: 'opacity 2s ease-in-out',
-          opacity: startChat ? 0 : 1, // startChat controls the visibility
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
