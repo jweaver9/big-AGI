@@ -163,30 +163,30 @@ interface ContentScalingOptions {
 export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
   xs: {
     blockCodeFontSize: '1rem',
-    blockFontSize: 'xs',
+    blockFontSize: '10px',
     blockImageGap: 1,
     blockLineHeight: 1.5,
     chatMessagePadding: 5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '.25rem', fontSize: 'xs' },          // 36px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.25em', fontSize: 'xs' },     // 40px
+    chatDrawerItemSx: { '--ListItem-minHeight': '.25rem', fontSize: '9px' },          // 36px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.25em', fontSize: '11px' },     // 40px
   },
   sm: {
-    blockCodeFontSize: '1.25rem',
-    blockFontSize: 'sm',
+    blockCodeFontSize: '1rem',
+    blockFontSize: '13px',
     blockImageGap: 3.5,
     blockLineHeight: 2,
     chatMessagePadding: 5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '.25rem', fontSize: 'sm' },
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.25rem', fontSize: 'sm' },
+    chatDrawerItemSx: { '--ListItem-minHeight': '.25rem', fontSize: '9px' },
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.25rem', fontSize: '11px' },
   },
   md: {
-    blockCodeFontSize: '1.5rem',
-    blockFontSize: 'md',
+    blockCodeFontSize: '1rem',
+    blockFontSize: '16px',
     blockImageGap: 3.5,
     blockLineHeight: 2.25,
     chatMessagePadding: 5,
-    chatDrawerItemSx: { '--ListItem-minHeight': '.25em', fontSize: 'md' },           // 40px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.25rem', fontSize: 'md' },    // 44px
+    chatDrawerItemSx: { '--ListItem-minHeight': '.25em', fontSize: '9px' },           // 40px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '.25rem', fontSize: '11px' },    // 44px
   },
   // lg: {
   //   chatDrawerFoldersLineHeight: '3rem',
