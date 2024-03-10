@@ -13,7 +13,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 // Define the style as an object
-export const formLabelStyle = {
+export const formLabelStartWidth = {
   width: '140px', // Adjust the width value as needed
 };
 
