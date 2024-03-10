@@ -12,6 +12,12 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
+// Define the style as an object
+export const formLabelStyle = {
+  width: '140px', // Adjust the width value as needed
+};
+
+
 const jetBrainsMono = JetBrains_Mono({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
