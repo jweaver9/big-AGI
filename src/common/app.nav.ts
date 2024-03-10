@@ -73,10 +73,10 @@ export interface NavItemExtLink extends ItemBase {
   href: string,
 }
 
-// interface MenuItemAction extends ItemBase {
-//   type: 'action',
-//   action: () => void,
-// }
+interface MenuItemAction extends ItemBase {
+type: 'action',
+  action: () => void,
+}
 
 
 export const navItems: {
@@ -122,7 +122,7 @@ export const navItems: {
       iconActive: AutoAwesomeIcon,
       type: 'app',
       route: '/cortex',
-      _delete: false,
+      _delete: true,
     },
     {
       name: 'Patterns',
@@ -130,7 +130,7 @@ export const navItems: {
       iconActive: AccountTreeIcon,
       type: 'app',
       route: '/patterns',
-      _delete: false,
+      _delete: true,
     },
     {
       name: 'Workspace',
@@ -140,7 +140,7 @@ export const navItems: {
       route: '/workspace',
       hideDrawer: true,
       hideOnMobile: true,
-      _delete: false,
+      _delete: true,
     },
     // <-- divider here -->
     {
@@ -164,7 +164,7 @@ export const navItems: {
       iconActive: ImageIcon,
       type: 'app',
       route: '/media',
-      _delete: false,
+      _delete: true,
     },
     {
       name: 'Shared Chat',

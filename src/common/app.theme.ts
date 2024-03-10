@@ -73,7 +73,7 @@ export const appTheme = extendTheme({
           surface: 'var(--joy-palette-neutral-800, #171A1C)',
           level1: 'var(--joy-palette-neutral-900, #1E2124)',
           level2: 'var(--joy-palette-neutral-800, #2A2F32)',
-          body: '#171A1C',
+          body: '#1E2124',
           // Former: popup > surface [900] > level 1 [black], level 2 [800] > body [black]
         },
       },
@@ -115,8 +115,8 @@ export const appTheme = extendTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...(ownerState.size === 'md' && {
-            '--Switch-trackWidth': '25px',
-            '--Switch-trackHeight': '15p',
+            '--Switch-trackWidth': '20px',
+            '--Switch-trackHeight': '15px',
             '--Switch-thumbSize': '5px',
           }),
         }),
@@ -169,10 +169,10 @@ export const themeScalingMap: Record<ContentScaling, ContentScalingOptions> = {
     blockCodeFontSize: '0.55rem',
     blockFontSize: 'xs',
     blockImageGap: 1,
-    blockLineHeight: 1.33333,
-    chatMessagePadding: 1.25,
-    chatDrawerItemSx: { '--ListItem-minHeight': '2rem', fontSize: '15px' },          // 36px
-    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2em', fontSize: '25px' },     // 40px
+    blockLineHeight: 1.2,
+    chatMessagePadding: 1,
+    chatDrawerItemSx: { '--ListItem-minHeight': '1rem', fontSize: '17px' },          // 36px
+    chatDrawerItemFolderSx: { '--ListItem-minHeight': '2em', fontSize: '20px' },     // 40px
   },
   sm: {
     blockCodeFontSize: '0.75rem',

@@ -2,7 +2,7 @@
     --AGI-Nav-width: 66px;
     --AGI-Drawer-width: 200px;
     --AGI-Desktop-Drawer-width: clamp(200px, 22.1vw, 450px);
-    --AGI-Optima-Radius: 0.1rem; /* var(--joy-radius-lg) */
+    --AGI-Optima-Radius: 0.0rem; /* var(--joy-radius-lg) */
 }
 
 .agi-ellipsize {
